@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel='stylesheet'href='./styles.css'>
+    <link rel="stylesheet" 
+    href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" 
+    integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" 
+    crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <title>Buddylist</title>
+  </head>
+     
+  <body>
+
+    <div class='container'>
+  
+      <div class='header'>
+        
+        <div class='logo-group'>
+          <div class='logo'>
+            <div class='logo__icon'></div>
+            <div class='logo__icon'></div>
+            <div class='logo__icon'></div>
+          </div>
+          <span class='logo__text'>buddylist</span>
+        </div>
+
+        <div class='user-info'>       
+          <img class='img' src='./pictures/profile.png'>
+          <i class="dot  fas  fa-circle"></i> 
+          <span>username</span>                  
+        </div>
+
+      </div>
+      
+      <div class='input-container'>
+        
+        <div class='input-group'>
+          <input type='text' placeholder='Type a name here to find a buddy!' class='input-group__input'>
+          <button class="btn  input-group__btn">
+            <i class='fas  fa-search'></i>
+          </button>
+        </div>
+
+        <button class='btn  btn--add'>+ add buddy</button>
+
+      </div>
+
+      <div class='display'>
+
+        <!-- IF THERE'S NO CONTACT ADDED TO THE LIST -->
+
+        <ul class='display--none  hidden'>
+          <li>No buddy to be displayed!</li>
+          <li>Add one!</li>
+          <li>:)</li>
+        </ul>
+
+        <!-- IF THERE IS CONTACT ADDED TO THE LIST -->
+
+        <div class='contacts  hidden'></div>
+
+        <!-- WHEN A CONTACT IS CLICKED -->
+
+        <div class='contact  hidden'>
+          <div class='contact__menu'>
+            
+            <div class='contact__left-buttons'>
+              <span class='contact__btn  contact__btn--edit'>
+                <i class="fas fa-user-edit"></i>
+                edit
+              </span>
+              <span class='contact__btn  contact__btn--delete'>
+                <i class="fas fa-trash-alt"></i>
+                delete
+              </span>
+            </div>
+           
+            <i class="contact__btn  contact__btn--exit  fas fa-times"></i>
+          </div>
+          <div class='contact__display'>
+          </div>
+        </div>
+
+        <!-- FORM -->
+
+        <div class='form  hidden'>
+
+          <div class='form__option'>
+            <label class='form__label'>name *</label>
+            <input class='form__input  form__input--name' placeholder = 'Ex: "Danillo"'>
+          </div>
+
+          <div class='form__option'>
+            <label class='form__label'>surname *</label>
+            <input class='form__input  form__input--surname' placeholder = 'Ex: "Nogueira"'>
+          </div>
+
+          <div class='form__option'>
+            <label class='form__label'>nickname</label>
+            <input class='form__input  form__input--nickname' placeholder = 'Ex: "Spiritseeker"'>
+          </div>
+
+          <div class='form__option'>
+            <label class='form__label'>gender</label>
+            <div class='form__gender'>
+              <label class='radio'>
+                <input type='radio' class='form__gender--male' value='male' name='gender'>
+                <i class='fas  fa-male  icon'></i>
+              </label>
+              <label class='radio'>
+                <input type='radio' class='form__gender--female' value='female' name='gender'>
+                <i class='fas  fa-female  icon'></i>
+              </label>
+            </div>
+          </div>
+
+          <div class='form__option'>
+            <label class='form__label'>birth</label>
+            <input class='form__input  form__input--birth' type='date'>
+          </div>
+
+          <div class='form__option'>
+            <label class='form__label'>phone *</label>
+            <input class='form__input  form__input--phone' placeholder = 'Ex: "66999196487"'>
+          </div>
+
+          <div class='form__option'>
+            <label class='form__label'>email</label>
+            <input class='form__input  form__input--email' placeholder = 'Ex: "dnll_nog@yahoo.com"'>
+          </div>
+
+          <div class='form__option'>
+            <label class='form__label'>instagram</label>
+            <input class='form__input  form__input--instagram' placeholder = 'Ex: "danillonogueira"'>
+          </div>
+
+          <div class='form__option'>
+            <label class='form__label'>twitter</label>
+            <input class='form__input  form__input--twitter' placeholder = 'Ex: "danillonogueira"'>
+          </div>
+
+          <div class='alert-container'>
+            <span class='alert  alert--success  hidden'>contact created!</span>
+            <span class='alert  alert--error  hidden'>Make sure NAME, SURNAME and PHONE are filled properly!</span>
+            <span class='alert  alert--edited  hidden'>contact edited!</span>
+          </div>
+
+          <button class='btn  btn--submit'>submit</button>
+        
+        </div>
+
+      </div>
+    
+    </div>
+
+    <script src='./app.js'></script>
+
+  </body>
+
+</html>
