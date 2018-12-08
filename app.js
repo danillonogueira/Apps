@@ -24,8 +24,7 @@ const formFields = {
   phone: document.querySelector('.form__input--phone'),
   email: document.querySelector('.form__input--email'),
   instagram: document.querySelector('.form__input--instagram'),
-  twitter: document.querySelector('.form__input--twitter')
-  
+  twitter: document.querySelector('.form__input--twitter')  
 }
 
 const addBuddy = document.querySelector('.btn--add');
@@ -91,14 +90,23 @@ function birthFormat(date) {
 
   if (date !== '') {
 
-    const year = date.slice(0, 4);
-    const month = date.slice(5, 7);
-    const day = date.slice(8, 10);
-
-    return `${day}/${month}/${year}`;
+    return `${date.slice(8, 10)}/${date.slice(5, 7)}/${date.slice(0, 4)}`;
   }
   return '';
 }
+
+// Phone format
+
+function phoneFormat(phone) {
+
+  if (phone !== '' && phone.length === 11) {
+
+    return `(${phone.slice(0, 2)}) ${phone.slice(2, 7)}-${phone.slice(7, 11)}`;
+  }
+  return '';
+}
+
+// 66999196487
 
 // Submit contact
 
@@ -110,7 +118,8 @@ function submitContact() {
       formFields.name.value !== '' && 
       formFields.surname.value !== '' && 
       isNaN(formFields.phone.value) === false &&
-      formFields.phone.value !== ''
+      formFields.phone.value !== '' &&
+      formFields.phone.value.length === 11
     ) {
 
       const index = parseInt(submitBuddy.getAttribute('data-index'));
@@ -145,7 +154,8 @@ function submitContact() {
       formFields.name.value !== '' && 
       formFields.surname.value !== '' && 
       isNaN(formFields.phone.value) === false &&
-      formFields.phone.value !== ''
+      formFields.phone.value !== '' &&
+      formFields.phone.value.length === 11
     ) {
       buddies.push({
         name: formFields.name.value,
@@ -254,7 +264,7 @@ function displayContact() {
     `
     <ul class='info' data-index='${contactIndex}'>
       <li class='info__name'>${person[0].name} ${person[0].surname}</li>
-      <li class='info__phone'>${person[0].phone}</li>
+      <li class='info__phone'>${phoneFormat(person[0].phone)}</li>
     </ul>
     `;
 
