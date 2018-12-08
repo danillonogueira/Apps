@@ -214,8 +214,12 @@ function filterBuddies() {
     contact.classList.add('hidden');
   }
 
-  if (contacts.classList.contains('hidden') === true) {
-    contacts.classList.remove('hidden');
+  if (contacts.classList.contains('hidden') === false) {
+    contacts.classList.add('hidden');
+  }
+
+  if (displayNone.classList.contains('hidden') === false) {
+    displayNone.classList.add('hidden');
   }
 
   if (search.value !== '') {
