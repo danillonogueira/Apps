@@ -91,11 +91,11 @@ a {
   pointer-events: none;
 }
 
-.img {
+.user-info__img {
   width: 40px;
 }
 
-.dot {
+.user-info__dot {
   font-size: 3px;
   color: #fff;
 }
@@ -316,8 +316,8 @@ a {
   pointer-events: none;
 }
 
-.instagram-icon,
-.twitter-icon {
+.info__instagram-icon,
+.info__twitter-icon {
   width: 25px;
   height: 25px;
   cursor: pointer;
