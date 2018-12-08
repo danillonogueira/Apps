@@ -297,7 +297,7 @@ function displayContact() {
       info.innerHTML += 
       `
       <a href="https://www.instagram.com/${person[0].instagram}" target="_blank">
-        <img class='instagram' src='./pictures/instagram-logo.png'>
+        <img class='instagram-icon' src='./pictures/instagram-logo.png'>
       </a>`;
     }
 
@@ -306,7 +306,7 @@ function displayContact() {
       info.innerHTML += 
       `
       <a href="https://www.twitter.com/${person[0].twitter}" target="_blank">
-        <img class='twitter' src='./pictures/twitter-logo.png'>
+        <img class='twitter-icon' src='./pictures/twitter-logo.png'>
       </a>`;
     }
 
