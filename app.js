@@ -249,6 +249,7 @@ function displayContact() {
     contacts.innerHTML = '';
     contacts.classList.add('hidden');
     contact.classList.remove('hidden');
+    clearInput();
 
     const contactIndex = event.target.getAttribute('data-index');
 
