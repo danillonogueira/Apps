@@ -316,10 +316,6 @@ a {
   pointer-events: none;
 }
 
-.media {
-  display: flex;
-}
-
 .instagram,
 .twitter {
   width: 25px;
@@ -342,7 +338,7 @@ a {
   width: 100%;
 }
 
-.form__option {
+.form__field {
   margin: 5px 0;
   display: flex;
   width: 420px;
@@ -388,7 +384,7 @@ input[type="radio"] {
   padding: 5px 265px 0 0;
 }
 
-.radio {
+.form__radio {
   margin: 0 5px;
   cursor: pointer;
   font-size: 18px;
@@ -429,4 +425,3 @@ input[type="radio"]:checked +.icon {
 .hidden {
   display: none;
 }
-

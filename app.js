@@ -106,8 +106,6 @@ function phoneFormat(phone) {
   return '';
 }
 
-// 66999196487
-
 // Submit contact
 
 function submitContact() {
