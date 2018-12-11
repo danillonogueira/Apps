@@ -92,6 +92,7 @@ function birthFormat(date) {
 
     return `${date.slice(8, 10)}/${date.slice(5, 7)}/${date.slice(0, 4)}`;
   }
+
   return '';
 }
 
@@ -103,6 +104,7 @@ function phoneFormat(phone) {
 
     return `(${phone.slice(0, 2)}) ${phone.slice(2, 7)}-${phone.slice(7, 11)}`;
   }
+  
   return '';
 }
 
@@ -187,6 +189,7 @@ function renderBuddies() {
 
   buddies
     .map((contact) => {
+      
       return `${contact.name} ${contact.surname}`;
     })
     .forEach((person, index) => {
@@ -212,10 +215,10 @@ function filterBuddies() {
 
   if (contact.classList.contains('hidden') === false) {
     contact.classList.add('hidden');
-  }
+  } 
 
-  if (contacts.classList.contains('hidden') === false) {
-    contacts.classList.add('hidden');
+  if (contacts.classList.contains('hidden') === true) {
+    contacts.classList.remove('hidden');
   }
 
   if (displayNone.classList.contains('hidden') === false) {
@@ -259,6 +262,7 @@ function displayContact() {
 
     const person = buddies.filter((contact, index) => {
       if (index == contactIndex) {
+        
         return contact;
       }       
     })
@@ -302,7 +306,7 @@ function displayContact() {
       info.innerHTML += 
       `
       <a href="https://www.instagram.com/${person[0].instagram}" target="_blank">
-        <img class='instagram-icon' src='./pictures/instagram-logo.png'>
+        <img class='info__instagram-icon' src='./pictures/instagram-logo.png'>
       </a>`;
     }
 
@@ -311,7 +315,7 @@ function displayContact() {
       info.innerHTML += 
       `
       <a href="https://www.twitter.com/${person[0].twitter}" target="_blank">
-        <img class='twitter-icon' src='./pictures/twitter-logo.png'>
+        <img class='info__twitter-icon' src='./pictures/twitter-logo.png'>
       </a>`;
     }
 
